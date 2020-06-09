@@ -55,10 +55,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 				];
 			}
 		} else {
-		    $header .= "From: ".$sender. "\r\n";
-		    $header .= "Reply-To: " . $sender ." \r\n";
 		    $header .= "Content-type: text/html; charset=iso-8859-1" ." \r\n";
-			$mail = mail($recipient, $subject, $body, implode('\r\n', $header));
+			$mail = mail($recipient, $subject, $body, $header);
 			if ($mail) {
 				$msg = [
 					'status' => true,
