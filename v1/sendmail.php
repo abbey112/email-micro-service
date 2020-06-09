@@ -16,13 +16,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 				'message' => 'recipient is required'
 			]
 		];
-	} else if(empty($sender)){
-	    $msg = [
-			'status' => false,
-			'data' => [
-				'message' => 'sender is required'
-			]
-		];
 	} else if(empty($subject)){
 		$msg = [
 			'status' => false,
